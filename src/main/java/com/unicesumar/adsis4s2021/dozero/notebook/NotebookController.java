@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,4 +18,9 @@ public class NotebookController {
 	public List<Notebook> obterTodos() {
 		return service.obterTodos();	//o método não será findAll(), será usado o nome da função
 	}									//declarada no service
+	
+	@GetMapping("/{id}")
+	public Notebook obterPeloId(@PathVariable String id) {
+		return service.obterPeloId(id);
+	}
 }
