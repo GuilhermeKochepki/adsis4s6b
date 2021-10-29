@@ -23,4 +23,8 @@ public class NotebookController {
 	public Notebook obterPeloId(@PathVariable String id) {
 		return service.obterPeloId(id);
 	}
+	
+	
+	
+	
 }
