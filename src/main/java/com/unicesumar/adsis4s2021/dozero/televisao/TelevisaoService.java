@@ -21,14 +21,14 @@ public class TelevisaoService {
 	}
 	
 	public Televisao criarNova(Televisao nova) {
-		if (repo.findById(nova.getId()).isPresent()) {
+		if (repo.findById(nova.getId()).isPresent()) {		//verificar se já tem para chamar o erro
 			throw new RegistroJáExistente();
 		}
 		return repo.save(nova);
 	}
 	
 	public Televisao atualizar(Televisao televisao) {
-		if (repo.findById(televisao.getId()).isEmpty()) {
+		if (repo.findById(televisao.getId()).isEmpty()) {		//verificar se não tem para chamar o erro
 			throw new RegistroNãoExistente();
 		}
 		return repo.save(televisao);

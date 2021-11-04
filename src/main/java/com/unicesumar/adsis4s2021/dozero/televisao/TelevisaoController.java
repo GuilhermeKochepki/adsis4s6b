@@ -40,6 +40,6 @@ public class TelevisaoController {
 	
 	@DeleteMapping("/{id}")
 	public void deletar(@PathVariable String id) {
-		service.deletar(id);
+		service.deletar(id);		//sem retorno
 	}
 }

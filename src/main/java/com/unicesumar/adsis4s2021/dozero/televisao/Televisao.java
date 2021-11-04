@@ -3,6 +3,7 @@ package com.unicesumar.adsis4s2021.dozero.televisao;
 import java.util.Objects;
 import java.util.UUID;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,8 +12,14 @@ public class Televisao {
 	
 	@Id
 	private String id;
+	
+	@Column(nullable = false)
 	private String marca;
+	
+	@Column(nullable = false)
 	private String modelo;
+	
+	@Column(nullable = false)
 	private int polegada;
 	
 	public Televisao() {

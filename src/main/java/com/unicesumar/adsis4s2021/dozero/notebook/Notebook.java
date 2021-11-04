@@ -3,6 +3,7 @@ package com.unicesumar.adsis4s2021.dozero.notebook;
 import java.util.Objects;
 import java.util.UUID;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -10,10 +11,20 @@ import javax.persistence.Id;
 public class Notebook {
 	@Id
 	private String id;
+	
+	@Column(nullable = false)
 	private String marca;
+	
+	@Column(nullable = false)
 	private String modelo;
+	
+	@Column(nullable = false)
 	private String processador;
+	
+	@Column(nullable = false)
 	private String armazenamento;
+	
+	@Column(nullable = false)
 	private String memoria;
 	
 	public Notebook() {
